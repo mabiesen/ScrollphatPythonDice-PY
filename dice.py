@@ -6,7 +6,7 @@ import sys
 import time
 import random
 
-#Not inherent! need to download from Adafruit
+#Not inherent! need to download from Pimoroni
 import scrollphat
 
 

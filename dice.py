@@ -1,15 +1,17 @@
 #!/usr/bin/env python
 
+#Import the following
 import math
 import sys
 import time
 import random
 
+#Not inherent! need to download from Adafruit
 import scrollphat
 
 
 
-
+#This section defines the lines that we will use to draw our numbers
 def pos1():
     scrollphat.set_pixel(7,0,1)
     scrollphat.set_pixel(6,0,1)
@@ -47,6 +49,8 @@ def pos7():
     scrollphat.set_pixel(5,2,1)
     scrollphat.set_pixel(6,2,1)
     scrollphat.set_pixel(7,2,1)
+    
+#This section will define our numbers using the lines that we defined above
 
 def numone():
     pos5()
@@ -100,13 +104,17 @@ def numeight():
     pos5()
     pos6()
     pos7()
+    
+#This section contains some basic code to work with the phat
 
+# This function sleeps for a full second after lighting phat
 def updaterelax():
     scrollphat.set_brightness(20)
     scrollphat.update()
     time.sleep(1)
     scrollphat.clear()
 
+# This function sleeps for a third of a second, flashing the screen with the number
 def hardblink():
     scrollphat.set_brightness(20)
     scrollphat.update()
@@ -114,6 +122,7 @@ def hardblink():
     scrollphat.clear()
     time.sleep(.7)
 
+#This function is a good example of how one might 'roll the dice'
 def randdice():
     dicearray = [numone,numtwo,numthree,numfour,numfive,numsix]
     roll = random.randint(1,6)
@@ -124,6 +133,7 @@ def randdice():
     time.sleep(10)
     scrollphat.clear()
 
+    
 def flashingdice():
     dicearray = [numone,numtwo,numthree,numfour,numfive,numsix]
     x = 0
